@@ -19,6 +19,9 @@
         <activity android:name=".ToolbarActivity"
             android:theme="@style/AppThemeNoActionBar"
             ></activity>
+        <activity android:name=".NestedScrollViewActivity"
+            android:theme="@style/AppThemeNoActionBar"
+            ></activity>
     </application>
 
 </manifest>

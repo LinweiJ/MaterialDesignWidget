@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViewById(R.id.btn_toolbar).setOnClickListener(this);
+        findViewById(R.id.btn_NestedScrollView).setOnClickListener(this);
 
     }
 
@@ -26,7 +27,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 break;
 
+            case R.id.btn_NestedScrollView:
+                intent.setClass(this,NestedScrollViewActivity.class);
 
+                break;
 
         }
 
