@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         findViewById(R.id.btn_toolbar).setOnClickListener(this);
         findViewById(R.id.btn_NestedScrollView).setOnClickListener(this);
+        findViewById(R.id.btn_TabLayout).setOnClickListener(this);
 
     }
 
@@ -31,7 +32,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent.setClass(this,NestedScrollViewActivity.class);
 
                 break;
+            case R.id.btn_TabLayout:
+                intent.setClass(this,TabLayoutActivity.class);
 
+                break;
         }
 
         startActivity(intent);

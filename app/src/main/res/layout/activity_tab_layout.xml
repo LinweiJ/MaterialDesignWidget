@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context="com.wega.materialdesignwidget.TabLayoutActivity">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:orientation="vertical"
+		android:id="@+id/ll_appbar"
+	    android:layout_height="wrap_content">
+
+		<android.support.v7.widget.Toolbar
+			android:id="@+id/toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="?attr/colorPrimary"
+			app:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+		</android.support.v7.widget.Toolbar>
+		<android.support.design.widget.TabLayout
+			android:id="@+id/tabLayout"
+			android:background="#3558B3"
+			app:tabIndicatorColor="#cdcdcd"
+			app:tabIndicatorHeight="4dp"
+			app:tabSelectedTextColor="#fff"
+			app:tabTextColor="#cdcdcd"
+			app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<android.support.design.widget.TabItem
+				android:icon="@drawable/ic_action_tab"
+				android:text="第一项"
+				android:tag="tag第三项"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"/>
+
+			<android.support.design.widget.TabItem
+				android:icon="@drawable/ic_action_tab"
+				android:text="第二项"
+				android:tag="tag第三项"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"/>
+			<android.support.design.widget.TabItem
+				android:icon="@drawable/ic_action_tab"
+				android:tag="tag第三项"
+				android:text="第三项"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"/>
+		</android.support.design.widget.TabLayout>
+
+	</LinearLayout>
+
+
+	<android.support.v4.widget.NestedScrollView
+		android:id="@+id/nestedScrollView"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginTop="130dp"
+	>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="400dp"
+				android:background="#cdcdcd"
+				android:text="这里简单展示TabLayout和TabItem的用法,\n仿造AppBarLayout的LinearLayout在CoordinatorLayout,
+				\n NestedScrollView根据(仿造AppBarLayout的)LinearLayout高度自适应"/>
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="400dp"
+				android:background="#ababab"/>
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="400dp"
+				android:background="#fafafa"/>
+		</LinearLayout>
+	</android.support.v4.widget.NestedScrollView>
+
+
+
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>
