@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+	tools:context="com.wega.materialdesignwidget.CoordinatorLayoutActivity">
+
+
+
+	<android.support.v7.widget.Toolbar
+		android:id="@+id/toolbar"
+		android:background="?attr/colorPrimary"
+		android:layout_width="match_parent"
+		app:theme="@style/ThemeOverlay.AppCompat.Dark"
+		android:layout_height="wrap_content">
+
+	</android.support.v7.widget.Toolbar>
+
+
+	<android.support.v4.widget.NestedScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginTop="?actionBarSize"
+	>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:orientation="vertical"
+			android:layout_height="match_parent">
+
+			<TextView
+				android:layout_width="match_parent"
+				android:text="这里简单展示跟FrameLayout一样的用法,增强behavior用法请看下面AppBarLayoutActivity等"
+				android:background="#cdcdcd"
+				android:layout_height="400dp"/>
+			<TextView
+				android:layout_width="match_parent"
+				android:background="#ababab"
+				android:layout_height="400dp"/>
+			<TextView
+				android:layout_width="match_parent"
+				android:background="#fafafa"
+				android:layout_height="400dp"/>
+		</LinearLayout>
+
+
+	</android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

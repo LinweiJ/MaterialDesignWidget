@@ -25,6 +25,9 @@
         <activity
             android:name=".TabLayoutActivity"
             android:theme="@style/AppThemeNoActionBar"></activity>
+        <activity
+            android:name=".CoordinatorLayoutActivity"
+            android:theme="@style/AppThemeNoActionBar"></activity>
     </application>
 
 </manifest>
