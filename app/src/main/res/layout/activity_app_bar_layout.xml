@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context="com.wega.materialdesignwidget.AppBarLayoutActivity">
+
+	<android.support.design.widget.AppBarLayout
+		android:id="@+id/ll_appbar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+		<android.support.v7.widget.Toolbar
+			android:id="@+id/toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="?attr/colorPrimary"
+			app:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+		</android.support.v7.widget.Toolbar>
+		<android.support.design.widget.TabLayout
+			android:id="@+id/tabLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="#3558B3"
+			app:tabIndicatorColor="#cdcdcd"
+			app:tabIndicatorHeight="4dp"
+			app:tabSelectedTextColor="#fff"
+			app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
+			app:tabTextColor="#cdcdcd">
+
+			<android.support.design.widget.TabItem
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:icon="@drawable/ic_action_tab"
+				android:tag="tag第三项"
+				android:text="第一项"/>
+
+			<android.support.design.widget.TabItem
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:icon="@drawable/ic_action_tab"
+				android:tag="tag第三项"
+				android:text="第二项"/>
+			<android.support.design.widget.TabItem
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:icon="@drawable/ic_action_tab"
+				android:tag="tag第三项"
+				android:text="第三项"/>
+		</android.support.design.widget.TabLayout>
+
+	</android.support.design.widget.AppBarLayout>
+
+
+	<android.support.v4.widget.NestedScrollView
+		android:id="@+id/nestedScrollView"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior"
+	>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="#cdcdcd"
+				android:padding="12dp"
+				android:text="这里简单展示AppBarLayout的用法,
+				\n AppBarLayout替代LinearLayout成为Toolbar和TabLayout的父布局,
+				\n NestedScrollView增加app:layout_behavior,自动适应AppBarLayout高度,并且有层叠的阴影效果
+                 \n AppBarLayout、NestedScrollView作为CoordinatorLayout的子布局，轻松地实现了在TabLayoutActivity的布局效果
+                 \n 当然这三者的作用远不止如此,
+                 \n  当某个可滑动的View(NestedScrollView)滑动手势改变时,作为AppbarLayout的子View可以通过app:layout_scrollFlags来定制的动作，
+                 \n app:layout_scrollFlags:可选的五个属性scroll,enterAlways,enterAlwaysCollapsed,exitUntilCollapsed,snap
+                 \n 一般使用的组合有五种：scroll、scroll|enterAlways、scroll|enterAlways|enterAlwaysCollapsed、scroll|exitUntilCollapsed、scroll|snap
+                 \n 请点击查看Toolbar和TabLayout对应不同app:layout_scrollFlags的效果
+                 \n 实例证明运用于单个子view,效果跟预期一样,多个子view同时定义app:layout_scrollFlags,效果可能不是预期,需要实际测试效果.
+                 \n  可以得到,layout_scrollFlags 主要是 为了与collapsingToolbarLayout配合使用的.尤其是scroll|exitUntilCollapsed 这个组合,可能有用的scroll|exitUntilCollapsed|snap
+                 \n
+
+                "/>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="#fafafa"
+				android:orientation="vertical">
+
+				<Button
+					android:id="@+id/scroll"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_margin="4dp"
+					android:text="scroll(嵌套滚动)"
+					android:textAllCaps="false"/>
+				<Button
+					android:id="@+id/scroll_enterAlways"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_margin="4dp"
+					android:text="scroll|enterAlways(嵌套滚动、快速返回)"
+					android:textAllCaps="false"/>
+				<Button
+					android:id="@+id/scroll_enterAlwaysCollapsed"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_margin="4dp"
+					android:text="scroll|enterAlways|enterAlwaysCollapsed(嵌套滚动、快速折叠返回)"
+					android:textAllCaps="false"/>
+				<Button
+					android:id="@+id/scroll_exit_util_collapsed"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_margin="4dp"
+					android:text="scroll|exitUtilCollapsed(嵌套滚动、折叠退出)"
+					android:textAllCaps="false"/>
+				<Button
+					android:id="@+id/scroll_span"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_margin="4dp"
+					android:text="scroll|span(嵌套滚动、惯性滚动)"
+					android:textAllCaps="false"/>
+			</LinearLayout>
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="400dp"
+				android:background="#ababab"/>
+		</LinearLayout>
+	</android.support.v4.widget.NestedScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>
+

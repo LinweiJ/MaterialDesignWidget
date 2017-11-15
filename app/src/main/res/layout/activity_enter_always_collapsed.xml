@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.wega.materialdesignwidget.AppBarLayout.EnterAlwaysCollapsedActivity">
+
+<android.support.design.widget.AppBarLayout
+	android:id="@+id/ll_appbar"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+
+	android:orientation="vertical">
+
+	<android.support.v7.widget.Toolbar
+		android:id="@+id/toolbar"
+		android:gravity="bottom"
+		android:layout_height="100dp"
+		app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+		android:layout_width="match_parent"
+		android:minHeight="?attr/actionBarSize"
+		android:background="?attr/colorPrimary"
+		app:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+	</android.support.v7.widget.Toolbar>
+	<android.support.design.widget.TabLayout
+		android:id="@+id/tabLayout"
+
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="#3558B3"
+		app:tabIndicatorColor="#cdcdcd"
+		app:tabIndicatorHeight="4dp"
+		app:tabSelectedTextColor="#fff"
+		app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
+		app:tabTextColor="#cdcdcd">
+
+		<android.support.design.widget.TabItem
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:icon="@drawable/ic_action_tab"
+			android:tag="tag第三项"
+			android:text="第一项"/>
+
+		<android.support.design.widget.TabItem
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:icon="@drawable/ic_action_tab"
+			android:tag="tag第三项"
+			android:text="第二项"/>
+		<android.support.design.widget.TabItem
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:icon="@drawable/ic_action_tab"
+			android:tag="tag第三项"
+			android:text="第三项"/>
+	</android.support.design.widget.TabLayout>
+
+</android.support.design.widget.AppBarLayout>
+
+
+<android.support.v4.widget.NestedScrollView
+	android:id="@+id/nestedScrollView"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	app:layout_behavior="@string/appbar_scrolling_view_behavior"
+>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="#cdcdcd"
+			android:lineSpacingExtra="12dp"
+			android:padding="12dp"
+			android:text="这里简单展示Toolbar:app:layout_scrollFlags= 'scroll|enterAlways|enterAlwaysCollapsed ' ,TabLayout:未设置app:layout_scrollFlags的效果
+
+		    \n 当滚动NestedScrollView时,Toolbar最先滚动,Toolbar相当于嵌套在NestedScrollView的LinearLayout的最上面的部分
+
+		    \n 只不过这个Toolbar和NestedScrollView组成的'ScrollView'中间隔着一个TabLayout,
+
+		    \n 这就轻松实现了TabLayout滚动并且置顶的效果,这在过去实现起来是需要费点时间的。
+
+            \n 当NestedScrollView向上滚动时,Toolbar最先向上滚动
+
+            \n 当NestedScrollView向下滚动时,Toolbar也是最先向下滚动,因为增加了enterAlways,
+
+            \n 当Toolbar滚动到minHeight时停止滚动,最后才滚动扩大到height
+
+            \n 实现Toolbar向下快速返回的效果
+
+            \n scroll|enterAlways是enterAlwaysCollapsed参数实现的前提条件
+
+            \n 当TabLayout:也设置app:layout_scrollFlags= 'scroll|enterAlways ',Toolbar、TabLayout相当于一个整体，当NestedScrollView向下滚动时,Toolbar、TabLayout整体布局最先向下滚动,
+                TabLayout滚动完成，之后 Toolbar滚动到minHeight时停止滚动，最后才滚动扩大到height
+            \n当TabLayout: 设置app:layout_scrollFlags= 'scroll|enterAlways|enterAlwaysCollapsed' , 效果很奇怪
+
+            \n
+"/>
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="400dp"
+			android:background="#ababab"
+			>
+		</TextView>
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="400dp"
+			android:background="#cdcdcd"/>
+	</LinearLayout>
+</android.support.v4.widget.NestedScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>
