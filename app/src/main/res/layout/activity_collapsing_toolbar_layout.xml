@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context="com.wega.materialdesignwidget.CollapsingToolbarLayoutActivity">
+
+	<android.support.design.widget.AppBarLayout
+		android:id="@+id/ll_appbar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:fitsSystemWindows="true"
+		android:orientation="vertical">
+
+		<android.support.design.widget.CollapsingToolbarLayout
+			android:id="@+id/CollapsingToolbarLayout"
+			android:layout_width="match_parent"
+			android:layout_height="400dp"
+			android:layout_weight="1"
+			app:collapsedTitleTextAppearance="@style/collapsedTitleTextAppearance"
+			app:contentScrim="#6F51B5"
+			app:expandedTitleTextAppearance="@style/expandedTitleTextAppearance"
+			app:layout_scrollFlags="scroll|exitUntilCollapsed"
+			app:statusBarScrim="#603F9F"
+			app:title="CollapsingToolbarLayout1"
+			app:titleEnabled="true">
+
+			<ImageView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:scaleType="centerCrop"
+				android:src="@mipmap/timg"
+				app:layout_collapseMode="parallax"
+				app:layout_collapseParallaxMultiplier="0.5"
+			/>
+			<android.support.v7.widget.Toolbar
+				android:id="@+id/toolbar"
+				android:layout_width="match_parent"
+				android:layout_height="?attr/actionBarSize"
+				android:minHeight="?attr/actionBarSize"
+				app:layout_collapseMode="pin"
+				app:navigationIcon="@drawable/ic_action_back"
+				app:subtitle="CollapsingToolbarLayout3"
+				app:theme="@style/ThemeOverlay.AppCompat.Dark"
+				app:title="CollapsingToolbarLayout2"
+			>
+
+			</android.support.v7.widget.Toolbar>
+
+
+		</android.support.design.widget.CollapsingToolbarLayout>
+
+
+		<android.support.design.widget.TabLayout
+			android:id="@+id/tabLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="#3558B3"
+			android:minHeight="40dp"
+			app:tabIndicatorColor="#cdcdcd"
+			app:tabIndicatorHeight="4dp"
+			app:tabSelectedTextColor="#fff"
+			app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
+			app:tabTextColor="#cdcdcd">
+
+			<android.support.design.widget.TabItem
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:icon="@drawable/ic_action_tab"
+				android:tag="tag第三项"
+				android:text="第一项"/>
+
+			<android.support.design.widget.TabItem
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:icon="@drawable/ic_action_tab"
+				android:tag="tag第三项"
+				android:text="第二项"/>
+			<android.support.design.widget.TabItem
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:icon="@drawable/ic_action_tab"
+				android:tag="tag第三项"
+				android:text="第三项"/>
+		</android.support.design.widget.TabLayout>
+
+	</android.support.design.widget.AppBarLayout>
+
+
+	<android.support.v4.widget.NestedScrollView
+		android:id="@+id/nestedScrollView"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior"
+	>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="#cdcdcd"
+				android:lineSpacingExtra="12dp"
+				android:padding="12dp"
+				android:text="@string/collapsingtoolbarlayout"/>
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="400dp"
+				android:background="#ababab"/>
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="400dp"
+				android:background="#cdcdcd"/>
+		</LinearLayout>
+	</android.support.v4.widget.NestedScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -11,4 +11,19 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+    <style name="AppThemeTranslucentStatus" parent="AppThemeNoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!--collapsedTitleTextAppearance-->
+    <style name="collapsedTitleTextAppearance" >
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#aaeedd</item>
+    </style>
+    <style name="expandedTitleTextAppearance" >
+        <item name="android:textSize">48sp</item>
+        <item name="android:textColor">#ddaaee</item>
+    </style>
+
 </resources>

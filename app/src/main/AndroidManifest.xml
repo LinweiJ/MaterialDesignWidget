@@ -46,6 +46,9 @@
         <activity
             android:name=".AppBarLayout.SpanActivity"
             android:theme="@style/AppThemeNoActionBar"></activity>
+        <activity
+            android:name=".CollapsingToolbarLayoutActivity"
+            android:theme="@style/AppThemeTranslucentStatus"></activity>
     </application>
 
 </manifest>

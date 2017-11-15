@@ -1,3 +1,57 @@
 <resources>
     <string name="app_name">MaterialDesignWidget</string>
+
+    <string
+        name="collapsingtoolbarlayout">
+		这里简单展示CollapsingToolbarLayout的效果
+		\n extends FrameLayout ,作为AppBarLayout的子布局,ToolbarLayout的父布局存在,用于包装Toolbar
+		\n 官方为我们实现了折叠Toolbar的效果,不用自己自定义后者使用第三方开源库来实现.
+		\n 通过app:layout_scrollFlags 五种组合模式 CollapsingToolbarLayout实现 嵌套滚动
+		\n 一般设置app:layout_scrollFlags= \"scroll|exitUntilCollapsed \"
+		\n 一般需要的效果:嵌套Toolbar和一个背景ImageView ,效果如下
+		\n 当NestedScrollView向上滚动时,CollapsingToolbarLayout最先向上滚动,一般会折叠到Toolbar高度:Toolbar height 必须为固定值
+		\n 当NestedScrollView向下滚动时,CollapsingToolbarLayout最后向下滚动,扩大到最大height,一般为背景ImageView的高度
+
+		\n 在CollapsingToolbarLayout最上层存在一个跟随折叠的可变字体title的\'titleView\',通过mCollapsingTextHelper进行绘制,
+		\n 并且作为子view的Toolbar的title和subTitle不会显示(Toolbar会被CollapsingToolbarLayout找到并设置)
+
+		\n CollapsingToolbarLayout通过实现AppBarLayout的OnOffsetChangedListener接口，根据AppBarLayout的偏移来实现子布局和title的视差移动以及ContentScrim和StatusBarScrim的显示
+
+		\n 折叠状态
+		\n app:collapsedTitleGravity
+		\n app:collapsedTitleTextAppearance
+
+		\n 展开状态
+		\n app:expandedTitleGravity
+		\n app:expandedTitleMargin
+		\n app:expandedTitleMarginTop
+		\n app:expandedTitleMarginBottom
+		\n app:expandedTitleMarginLeft
+		\n app:expandedTitleMarginRight
+
+		\n 是否使用CollapsingToolbarLayout的title,false 将使用Toolbar的title
+		\n app:titleEnabled
+
+
+		\n app:statusBarScrim 状态栏纱布 根据滚动位置到达一个阀值,改变StatusBar颜色,只能在5.0 API21 LOLLIPOP以上有作用。折叠时状态栏的颜色
+		\n setStatusBarScrim(Drawable)
+
+		\n This scrim is only shown when we have been given a top system inset
+		\n CollapsingToolbarLayout需要嵌入到StatusBar 这个涉及到使用透明化状态栏
+		\n \'android:windowTranslucentStatus\' true
+		\n getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+
+		\n 问题1:AppBarLayout设置android:fitsSystemWindows有效, CollapsingToolbarLayout和Toolbar无效
+		\n 问题2:展开时StatusBar位置（CollapsingToolbarLayout的paddingTop）颜色可通过CollapsingToolbarLayout或者AppBarLayout的background设置。默认为colorPrimary
+        \n 问题3:展开时StatusBar位置需要背景图嵌入,以后再说
+
+		\n app:contentScrim 内容纱布 折叠时CollapsingToolbarLayout的颜色 setContentScrim(Drawable)
+		\n toolbar不设置背景颜色,不然会覆盖,通常也需要toolbar为透明
+
+		\n app:layout_collapseMode:parallax 视差滚动 app:layout_collapseParallaxMultiplier 视差因子 默认0.5
+		\n 可取0-1(子View相对collapsingToolbarLayout向下运动速度,当0时,没有相对速度,即相对于collapsingToolbarLayout静止,当1时,与collapsingToolbarLayout向上速度相等,即相对于phoneView静止)
+		\n app:layout_collapseMode:pin 钉子 固定在屏幕上, 即相对于phoneView静止,toolbar一般设置为pin
+
+
+	</string>
 </resources>

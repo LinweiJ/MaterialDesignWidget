@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_CoordinatorLayout).setOnClickListener(this);
         findViewById(R.id.btn_TabLayout).setOnClickListener(this);
         findViewById(R.id.btn_AppBarLayout).setOnClickListener(this);
+        findViewById(R.id.btn_CollapsingToolbarLayout).setOnClickListener(this);
 
     }
 
@@ -45,6 +46,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.btn_AppBarLayout:
                 intent.setClass(this,AppBarLayoutActivity.class);
+
+                break;
+            case R.id.btn_CollapsingToolbarLayout:
+                intent.setClass(this,CollapsingToolbarLayoutActivity.class);
 
                 break;
         }
