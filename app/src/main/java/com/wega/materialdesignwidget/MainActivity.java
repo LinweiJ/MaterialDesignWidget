@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_AppBarLayout).setOnClickListener(this);
         findViewById(R.id.btn_CollapsingToolbarLayout).setOnClickListener(this);
         findViewById(R.id.btn_CardView).setOnClickListener(this);
+        findViewById(R.id.btn_FloatingActionButton).setOnClickListener(this);
 
     }
 
@@ -55,6 +56,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_CardView:
                 intent.setClass(this,CardViewActivity.class);
+
+                break;
+            case R.id.btn_FloatingActionButton:
+                intent.setClass(this,FloatingActionButtonActivity.class);
 
                 break;
         }

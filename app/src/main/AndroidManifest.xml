@@ -52,6 +52,9 @@
         <activity
             android:name=".CardViewActivity"
             ></activity>
+        <activity
+            android:name=".FloatingActionButtonActivity"
+            android:theme="@style/AppThemeTranslucentStatus"></activity>
     </application>
 
 </manifest>
