@@ -55,6 +55,9 @@
         <activity
             android:name=".FloatingActionButtonActivity"
             android:theme="@style/AppThemeTranslucentStatus"></activity>
+        <activity
+            android:name=".SnackBarActivity"
+            ></activity>
     </application>
 
 </manifest>

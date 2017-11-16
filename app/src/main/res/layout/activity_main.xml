@@ -85,6 +85,14 @@
                 android:textAllCaps="false"
                 android:layout_margin="8dp"
                 />
+            <Button
+                android:id="@+id/btn_SnackBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SnackBar"
+                android:textAllCaps="false"
+                android:layout_margin="8dp"
+                />
         </LinearLayout>
     </ScrollView>
 
