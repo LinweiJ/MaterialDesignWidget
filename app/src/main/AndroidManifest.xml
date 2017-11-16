@@ -49,6 +49,9 @@
         <activity
             android:name=".CollapsingToolbarLayoutActivity"
             android:theme="@style/AppThemeTranslucentStatus"></activity>
+        <activity
+            android:name=".CardViewActivity"
+            ></activity>
     </application>
 
 </manifest>
