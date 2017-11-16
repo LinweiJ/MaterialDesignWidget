@@ -58,6 +58,9 @@
         <activity
             android:name=".SnackBarActivity"
             ></activity>
+        <activity
+            android:name=".TextInputLayoutActivity"
+            ></activity>
     </application>
 
 </manifest>

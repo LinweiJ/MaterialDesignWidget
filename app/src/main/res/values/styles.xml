@@ -25,5 +25,12 @@
         <item name="android:textSize">48sp</item>
         <item name="android:textColor">#ddaaee</item>
     </style>
-
+    <style name="hintAppearance">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#dd6aee</item>
+    </style>
+    <style name="errorAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#dd6a2e</item>
+    </style>
 </resources>
