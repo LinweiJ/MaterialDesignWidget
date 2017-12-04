@@ -58,4 +58,6 @@
 
 	<string name="drawer_open">open111</string>
 	<string name="drawer_close">close2222</string>
+	<string name="drawer_open2">open1112</string>
+	<string name="drawer_close2">close22222</string>
 </resources>
