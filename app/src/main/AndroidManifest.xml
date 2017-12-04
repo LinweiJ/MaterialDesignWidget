@@ -18,49 +18,65 @@
         </activity>
         <activity
             android:name=".ToolbarActivity"
-            android:theme="@style/AppThemeNoActionBar"></activity>
+            android:theme="@style/AppThemeNoActionBar">
+        </activity>
         <activity
             android:name=".NestedScrollViewActivity"
-            android:theme="@style/AppThemeNoActionBar"></activity>
+            android:theme="@style/AppThemeNoActionBar">
+        </activity>
         <activity
             android:name=".TabLayoutActivity"
-            android:theme="@style/AppThemeNoActionBar"></activity>
+            android:theme="@style/AppThemeNoActionBar">
+        </activity>
         <activity
             android:name=".CoordinatorLayoutActivity"
-            android:theme="@style/AppThemeNoActionBar"></activity>
+            android:theme="@style/AppThemeNoActionBar">
+        </activity>
         <activity
             android:name=".AppBarLayoutActivity"
-            android:theme="@style/AppThemeNoActionBar"></activity>
+            android:theme="@style/AppThemeNoActionBar">
+        </activity>
         <activity
             android:name=".AppBarLayout.ScrollActivity"
-            android:theme="@style/AppThemeNoActionBar"></activity>
+            android:theme="@style/AppThemeNoActionBar">
+        </activity>
         <activity
             android:name=".AppBarLayout.ExitUntilCollapsedActivity"
-            android:theme="@style/AppThemeNoActionBar"></activity>
+            android:theme="@style/AppThemeNoActionBar">
+        </activity>
         <activity
             android:name=".AppBarLayout.EnterAlwaysCollapsedActivity"
-            android:theme="@style/AppThemeNoActionBar"></activity>
+            android:theme="@style/AppThemeNoActionBar">
+        </activity>
         <activity
             android:name=".AppBarLayout.EnterAlwaysActivity"
-            android:theme="@style/AppThemeNoActionBar"></activity>
+            android:theme="@style/AppThemeNoActionBar">
+        </activity>
         <activity
             android:name=".AppBarLayout.SpanActivity"
-            android:theme="@style/AppThemeNoActionBar"></activity>
+            android:theme="@style/AppThemeNoActionBar">
+        </activity>
         <activity
             android:name=".CollapsingToolbarLayoutActivity"
-            android:theme="@style/AppThemeTranslucentStatus"></activity>
+            android:theme="@style/AppThemeTranslucentStatus">
+        </activity>
         <activity
-            android:name=".CardViewActivity"
-            ></activity>
+            android:name=".CardViewActivity">
+        </activity>
         <activity
             android:name=".FloatingActionButtonActivity"
-            android:theme="@style/AppThemeTranslucentStatus"></activity>
+            android:theme="@style/AppThemeTranslucentStatus">
+        </activity>
         <activity
-            android:name=".SnackBarActivity"
-            ></activity>
+            android:name=".SnackBarActivity">
+        </activity>
         <activity
-            android:name=".TextInputLayoutActivity"
-            ></activity>
+            android:name=".TextInputLayoutActivity">
+        </activity>
+        <activity
+            android:name=".DrawerLayoutActivity"
+            android:theme="@style/AppThemeNoActionBar">
+        </activity>
     </application>
 
 </manifest>

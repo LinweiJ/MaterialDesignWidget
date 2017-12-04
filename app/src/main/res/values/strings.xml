@@ -54,4 +54,8 @@
 
 
 	</string>
+
+
+	<string name="drawer_open">open111</string>
+	<string name="drawer_close">close2222</string>
 </resources>

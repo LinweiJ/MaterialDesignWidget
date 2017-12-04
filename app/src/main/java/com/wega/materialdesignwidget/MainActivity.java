@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_FloatingActionButton).setOnClickListener(this);
         findViewById(R.id.btn_SnackBar).setOnClickListener(this);
         findViewById(R.id.btn_TextInputLayout).setOnClickListener(this);
+        findViewById(R.id.btn_DrawerLayout).setOnClickListener(this);
 
     }
 
@@ -68,8 +69,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent.setClass(this,SnackBarActivity.class);
 
                 break;
-                case R.id.btn_TextInputLayout:
+            case R.id.btn_TextInputLayout:
                 intent.setClass(this,TextInputLayoutActivity.class);
+
+                break;
+            case R.id.btn_DrawerLayout:
+                intent.setClass(this,DrawerLayoutActivity.class);
 
                 break;
         }
