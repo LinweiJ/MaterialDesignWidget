@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_TextInputLayout).setOnClickListener(this);
         findViewById(R.id.btn_DrawerLayout).setOnClickListener(this);
         findViewById(R.id.btn_NavigationView).setOnClickListener(this);
+        findViewById(R.id.btn_switch).setOnClickListener(this);
 
     }
 
@@ -80,6 +81,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_NavigationView:
                 intent.setClass(this,NavigationViewActivity.class);
+
+                break;
+            case R.id.btn_switch:
+                intent.setClass(this,SwitchActivity.class);
 
                 break;
         }

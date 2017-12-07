@@ -81,6 +81,9 @@
             android:name=".NavigationViewActivity"
             android:theme="@style/AppThemeNoActionBar">
         </activity>
+        <activity
+            android:name=".SwitchActivity">
+        </activity>
     </application>
 
 </manifest>
